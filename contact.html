@@ -3,154 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Delux Bakery - Contact</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <style>
-        .main{
-            width: 100%;
-            /* height: 400px; */
-        }
-        img{
-            height: 100%;
-            width: 100%;
-        }
-        .form-box{
-            width: 65%;
-            margin: 40px auto;
-            padding: 30px;
-        }
-        h1{
-            text-align: center;
-            font-size: 32px;
-            font-weight: normal;
-            margin-bottom: 50px;
-        }
-        .form-row{
-            display: flex;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        .field{
-            width: 50%;
-        }
-        label{
-            display: block;
-            font-size: 15px;
-            margin-bottom: 15px;
-        }
-        input{
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-bottom: 1px solid #777;
-            background: transparent;
-            font-size: 16px;
-            outline: none;
-            box-sizing: border-box;
-        }
-        .full{
-            width: 100%;
-        }
-        .terms{
-            text-align: center;
-            margin: 40px 0;
-        }
-        .terms>input{
-            width: auto;
-        }
-        .submit{
-            display: block;
-            width: 220px;
-            margin: auto;
-            padding: 13px;
-            background-color: #101116;
-            color: white;
-            border-radius: 30px;
-            cursor: pointer;
-            border: none;
-        }  
-        .contact-boxes{
-            display: flex;
-            width: 100%;
-            border-top: 1px solid #ddd;
-            border-bottom: 1px solid #ddd;
-        }
-        .box{
-            width: 25%;
-            padding: 50px 15px;
-            text-align: center;
-            border-right: 1px solid #ddd;
-            box-sizing: border-box;
-        }
-        .box:last-child{
-            border-right: none;
-        }
-        .box>i{
-            font-size: 20px;
-            margin-bottom: 18px;
-            color: #555;
-        }
-        .box>h3{
-            font-size: 15px;
-            font-weight: normal;
-            margin: 10px 0 18px;
-        }
-        .box>p{
-            font-size: 13px;
-            line-height: 1.8;
-            color: #777;
-        }
-        .social>a{
-            display: inline-block;
-            margin: 0 4px;
-            color: white;
-            background-color: #333;
-            width: 20px;
-            height: 20px;
-            line-height: 20px;
-            border-radius: 50%;
-            font-size: 11px;
-            text-decoration: none;
-        }
-        .bottom-section{
-            display: flex;
-            width: 100%;
-            padding: 35px 0;
-            align-items: center;
-        }
-        .map{
-            width: 50%;
-            text-align: center;
-        }
-        .map>iframe{
-            width: 80%;
-            height: 350px;
-            border: none;
-        }
-        .hours{
-            width: 50%;
-            text-align: center;
-        }
-        .hours>h2{
-            font-size: 26px;
-            font-weight: normal;
-            margin-bottom: 35px;
-        }
-        .hoursp{
-            font-family: Georgia, serif;
-            font-style: italic;
-            font-size: 15px;
-            line-height: 1.8;
-            color: #777;
-            margin: 0;
-        } 
-    </style>
 </head>
 <body>
     <nav>
         <div class="logo">
-            <img src="Assests/Images/logo1.png" alt="">
+            <img src="Assests/Images/Logo.png" alt="Image">
         </div>
         <ul>
             <a href="index.html"><li><b>HOME</b></li></a>
@@ -161,142 +21,215 @@
         </ul>
     </nav>
     <div class="main">
-        <img src="Assests/Images/img2.jpg" alt="">
-        <div class="form-box">
-    <h1>Events & Celebrations Form</h1>
-    <form>
-        <div class="form-row">
-            <div class="field">
-                <label>Full Name *</label>
-                <input type="text" required>
-            </div>
-            <div class="field">
-                <label>Event Duration *</label>
-                <input type="text" required>
+        <div class="banner">
+            <img src="Assests/Images/Contact-Banner.png" alt="Image">
+        </div>
+        <div class="contact-box">    
+        <div class="con-box">
+            <div class="type">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Address</h3>
+            <p>Delux Bakery<br>Ajmer, Rajasthan, India</p>
             </div>
         </div>
-        <div class="form-row">
-            <div class="field">
-                <label>Email *</label>
-                <input type="email" required>
-            </div>
-            <div class="field">
-                <label>Date Event *</label>
-                <input type="date" required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="field full">
-                <label>Describe Your Event</label>
-                <input type="text">
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="field">
-                <label>Code</label>
-                <input type="text" value="+91">
-            </div>
-            <div class="field">
-                <label>Phone *</label>
-                <input type="tel" placeholder="Phone" required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="field">
-                <label>Company</label>
-                <input type="text" placeholder="Company">
-            </div>
-            <div class="field">
-                <label>Location Event *</label>
-                <input type="text" placeholder="Address" required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="field">
-                <label>Event Type *</label>
-                <input type="text" placeholder="Add answer here" required>
-            </div>
-        <div class="field">
-                <label>Guaranteed Guests *</label>
-                <input type="number" placeholder="Enter a number" required>
-            </div>
-        </div>
-        <div class="terms">
-            <input type="checkbox" required>
-            I agree to the terms & conditions
-        </div>
-        <input type="submit" value="Inquire Now" class="submit">
-    </form>
-</div>
-<div class="contact-boxes">
-    <div class="box">
-        <i class="fa-solid fa-location-dot"></i>
-        <h3>Address</h3>
-        <p>Delux Bakery<br>Ajmer, Rajasthan, India</p>
-    </div>
-        <div class="box">
-            <i class="fa-solid fa-phone"></i>
+        <div class="con-box">
+            <div class="type">
+            <a href="tel:+919828080208"><i class="fa-solid fa-phone"></i></a>
             <h3>Phone</h3>
-            <p>Contact us for orders</p>
+            <p>Contact us for orders<br>91 98280 80208</p>
+            </div>
         </div>
-        <div class="box">
-            <i class="fa-solid fa-envelope"></i>
+        <div class="con-box">
+            <div class="type">
+            <a href="mailto:deluxbakery1962@gmail.com">
+                <i class="fa-regular fa-envelope"></i>
+            </a>
             <h3>Email</h3>
-            <p></p>
+            <p>deluxbakery1962@gmail.com</p>
+            </div>
         </div>
-        <div class="box">
-            <i class="fa-solid fa-thumbs-up"></i>
+        <div class="con-box">
+            <div class="type">
+                <i class="fa-solid fa-thumbs-up"></i>
             <h3>Connect</h3>
             <div class="social">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/deluxbakeryajmer/"
+                   aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/p/Delux-Bakery-100063608449297/"
+                   aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://wa.me/919828080208">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
             </div>
         </div>
     </div>
-    <div class="bottom-section">
-        <div class="map">
-            <iframe
-                src="" allowfullscreen="" loading="lazy">
-            </iframe>
-        </div>
-        <div class="hours">
-            <h2>Opening Hours</h2>
-            <p>Monday 7am - 10pm</p>
-            <p>Tuesday 7am - 10pm</p>
-            <p>Wednesday 7am - 10pm</p>
-            <p>Thursday 7am - 10pm</p>
-            <p>Friday 7am - 10pm</p>
-            <p>Saturday 7am - 10pm</p>
-            <p>Sunday 7am - 10pm</p>
-        </div>
-    </div>
-    </div>
-    <div class="footer">
-        <h2>Freshly Baked, Always a Good Idea</h2>
-        <div class="email">
-            <form action="">
-                <label for="Enter your Email here*"></label>
-                <input type="email">
-                <button><input type="submit"></button>
+        <div class="form-box">
+            <h1>Events & Celebrations Form</h1>
+            <form>
+                <div class="form-row">
+                    <div class="field">
+                        <label>Full Name</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="field">
+                        <label>Event Duration</label>
+                        <input type="text" required>
+                    </div>
+                </div>
+               <div class="form-row">
+                    <div class="field">
+                        <label>Email</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="field">
+                        <label>Date Event</label>
+                        <input type="date" required>
+                    </div>
+               </div>
+               <div class="form-row">
+                    <div class="field full">
+                        <label>Describe Your Event</label>
+                        <input type="text">
+                    </div>
+               </div>
+               <div class="form-row">
+                    <div class="field">
+                        <label>Code</label>
+                        <input type="text" value="+91">
+                    </div>
+                    <div class="field">
+                        <label>Phone</label>
+                        <input type="tel" placeholder="Phone" required>
+                    </div>
+               </div>
+               <div class="form-row">
+                    <div class="field">
+                        <label>Company</label>
+                        <input type="text" placeholder="Company">
+                    </div>
+                    <div class="field">
+                        <label>Location Event</label>
+                        <input type="text" placeholder="Address" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="field">
+                        <label>Event Type</label>
+                        <input type="text" placeholder="Add answer here" required>
+                    </div>
+                    <div class="field">
+                        <label>Guaranteed Guests</label>
+                        <input type="number" placeholder="Enter a number" required>
+                    </div>
+                </div>
+                <div class="terms">
+                    <input type="checkbox" required>
+                    I agree to the terms & conditions
+                </div>
+                <input type="submit" value="Enquire Now" class="submit">
             </form>
         </div>
-        <div class="social-accounts">
-            <div class="nav">
-            <ul>
-            <a href="about.html"><li>OUR STORY</li></a>
-            <a href="product.html"><li>MENU</li></a>
-            <a href="gallery.html"><li>GALLERY</li></a>
-            <a href="contact.html"><li>CONTACT</li></a>
-        </ul>
+        <div class="bottom">
+        <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3572.125911702877!2d74.6359966!3d26.45167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be72209555555%3A0xdc8fbad4391d1173!2sDelux%20Bakery!5e0!3m2!1sen!2sin!4v1792921802184!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
-            <div class="accounts">
-                <h2>Follow Us:</h2>
-                <i class="fa fa-brands fa-instagram"></i>
-                <i class="fa fa-brands fa-facebook"></i>
-                <i class="fa fa-brands fa-google"></i>
+            <div class="hours">
+                <h2>Opening Hours</h2>
+                <p>Sunday - 9 AM - 11 PM</p>
+                <p>Monday - 9 AM - 11 PM</p>
+                <p>Tuesday - 9 AM - 11 PM</p>
+                <p>Wednesday - 9 AM - 11 PM</p>
+                <p>Thrusday - 9 AM - 11 PM</p>
+                <p>Friday - 9 AM - 11 PM</p>
+                <p>Saterdayday - 9 AM - 11 PM</p>
+            </div>
+    </div>
+    <div class="sketch">
+        <div class="lil">
+            <img src="Assests/Images/Sketch1.png" alt="Image">
+            <h3>A little occation calls for a rather lovely cake.</h3>
+        </div>
+        <div class="lil">
+            <img src="Assests/Images/Sketch2.png" alt="Image">
+            <h3>Rolled to perfection, naturally.</h3>
+        </div>
+        <div class="lil">
+            <img src="Assests/Images/Sketch3.png" alt="Image">
+            <h3>Small in size, grand in character.</h3>
+        </div>
+        <div class="lil">
+            <img src="Assests/Images/Sketch4.png" alt="Image">
+            <h3>A proper treat, quite simply.</h3>
+        </div>
+    </div>
+    </div>    
+    <div class="footer">
+        <div class="footer-main">
+        <div class="footer-brand">
+            <h1>DELUX <span>BAKERY</span></h1>
+            <p class="footer-quote">
+                A little sweetness,<br>
+                a lasting memory.
+            </p>
+            <a href="gallery.html" class="footer-button">
+                EXPLORE OUR GALLERY
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="footer-column">
+            <h3>EXPLORE</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">Our Story</a>
+            <a href="product.html">Our Menu</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-column">
+            <h3>OUR TREATS</h3>
+            <a href="product.html">Cakes</a>
+            <a href="product.html">Pastries</a>
+            <a href="product.html">Brownies</a>
+            <a href="product.html">Cookies</a>
+            <a href="product.html">Breads</a>
+        </div>
+        <div class="footer-column footer-contact">
+            <h3>COME SAY HELLO</h3>
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Bhagwan Adhinath Marg, Kaiser Ganj, Ajmer, Rajasthan
+            </p>
+            <p>
+                <i class="fa-regular fa-clock"></i>
+                Every day  9 AM - 11 PM
+            </p>
+            <a href="contact.html">
+                Get in touch
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/deluxbakeryajmer/"
+                   aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/p/Delux-Bakery-100063608449297/"
+                   aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="mailto:deluxbakery1962@gmail.com">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
             </div>
         </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 DELUX BAKERY. ALL RIGHTS RESERVED.</p>
+        <p>MADE WITH LOVE AND A LITTLE SWEETNESS.</p>
+    </div>
     </div>
 </body>
 </html>
