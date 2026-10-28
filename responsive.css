@@ -1,0 +1,611 @@
+/* =============================================================
+   DELUX BAKERY – responsive.css
+   -------------------------------------------------------------
+   HOW TO USE: link this file AFTER style.css on every page:
+
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="responsive.css">
+
+   Breakpoints
+     > 1100px  : laptop / desktop (original design kept)
+     <= 1100px : small laptop / tablet landscape
+     <=  900px : tablet portrait
+     <=  800px : mobile navigation + stacked layouts
+     <=  720px : menu cards stack
+     <=  600px : phones
+     <=  480px : small phones
+   ============================================================= */
+
+
+/* -------------------------------------------------------------
+   1. BASE SAFETY (all screen sizes)
+   ------------------------------------------------------------- */
+html {
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    overflow-x: hidden;
+}
+img,
+iframe,
+video {
+    max-width: 100%;
+}
+
+
+/* -------------------------------------------------------------
+   2. FIXED HEIGHTS -> FLEXIBLE (all screen sizes)
+   Content can now grow instead of being clipped.
+   ------------------------------------------------------------- */
+
+/* Home: hero banner */
+body .main1 {
+    height: clamp(220px, 52vw, 600px);
+}
+
+/* Home: three pictures */
+body .three {
+    height: auto;
+}
+body .imga,
+body .imgb,
+body .imgc {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    max-width: 300px;
+    height: 400px;
+}
+
+/* Home: text + image blocks */
+body .para1,
+body .para2 {
+    height: auto;
+    min-height: 700px;
+}
+body .left-a,
+body .right-b {
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+body .right-a,
+body .left-b {
+    height: auto;
+    position: relative;
+    min-height: 320px;
+}
+body .right-a > img,
+body .left-b > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Sketch icons (Home + Contact) */
+body .lil {
+    height: auto;
+    min-height: 240px;
+}
+
+/* Menu cards */
+body .container {
+    height: auto;
+    align-items: stretch;
+}
+body .box {
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    flex: 1 1 0;
+    min-width: 0;
+}
+body .box > a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0 10px;
+}
+body .box .submit {
+    width: min(220px, 100%);
+}
+
+/* Banner (Menu + Contact) */
+body .banner {
+    height: clamp(180px, 34vw, 400px);
+}
+
+/* Contact: info boxes */
+body .contact-box {
+    height: auto;
+}
+body .contact-box > .con-box {
+    height: auto;
+    min-height: 250px;
+    padding: 20px 8px;
+}
+body .contact-box > .con-box > .type {
+    height: auto;
+    width: 90%;
+    overflow-wrap: anywhere;
+}
+
+/* Contact: map + opening hours */
+body .map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer */
+body .footer {
+    height: auto;
+}
+body .footer-main,
+body .footer-bottom {
+    padding-left: 4%;
+    padding-right: 4%;
+}
+/* Home + Menu footers use h2 instead of h3 – style them the same */
+body .footer-column h2 {
+    color: #C6A46A;
+    font-family: var(--font-display);
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+body .footer-brand h2 {
+    font-family: 'Cormorant Garamond', var(--font-display);
+    font-size: 32px;
+    letter-spacing: 3px;
+    color: #FFF4E5;
+    text-align: center;
+}
+body .footer-brand h2 span {
+    display: block;
+    font-size: 16px;
+    letter-spacing: 7px;
+    color: #C6A46A;
+}
+
+
+/* -------------------------------------------------------------
+   3. SMALL LAPTOP / TABLET LANDSCAPE  (<= 1100px)
+   ------------------------------------------------------------- */
+@media (max-width: 1100px) {
+
+    /* Navigation text */
+    nav > ul > li,
+    nav > ul > a > li {
+        font-size: 0.85rem;
+        letter-spacing: 0.1em;
+    }
+
+    /* Home */
+    body .para1 { width: 90%; }
+    body .para2 { width: 92%; }
+    body .main2 { height: clamp(260px, 62vw, 100vh); }
+
+    /* Menu cards */
+    body .container { gap: 16px; }
+    body .box h2 {
+        font-size: clamp(0.95rem, 2.2vw, 1.25rem);
+        text-align: center;
+        padding: 0 8px;
+    }
+
+    /* Contact */
+    body .form-box { width: 80%; }
+    body .con-box > .type > h3 { font-size: 14px; }
+
+    /* About */
+    body .ab-text { line-height: 2.4; }
+}
+
+
+/* -------------------------------------------------------------
+   4. TABLET PORTRAIT  (<= 900px)
+   ------------------------------------------------------------- */
+@media (max-width: 900px) {
+
+    /* Contact info boxes: 2 x 2 grid */
+    body .contact-box {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 0 16px;
+        margin-top: 40px;
+    }
+    body .contact-box > .con-box {
+        width: calc(50% - 8px);
+        min-height: 200px;
+    }
+
+    /* Contact form */
+    body .form-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* About: stack text over image */
+    body .ab-box {
+        flex-direction: column;
+    }
+    body .ab-left,
+    body .ab-right {
+        width: 100%;
+        height: auto;
+    }
+    body .ab-text {
+        width: 88%;
+        line-height: 1.85;
+        text-align: left;
+        padding: 10px 0 30px;
+    }
+    body .ab-text > h1,
+    body .ab-text > h2 {
+        text-align: center;
+    }
+    body .img1 {
+        width: 100%;
+        height: clamp(260px, 70vw, 520px);
+    }
+    body .img1 img {
+        height: 100%;
+    }
+
+    /* Footer: brand on top, columns underneath */
+    body .footer-main {
+        flex-wrap: wrap;
+        gap: 32px 40px;
+    }
+    body .footer-brand {
+        flex: 1 1 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+    body .footer-brand h1 {
+        margin-bottom: 10px;
+    }
+    body .footer-column {
+        flex: 1 1 40%;
+    }
+    body .footer-column.footer-contact {
+        flex: 1 1 100%;
+    }
+}
+
+
+/* -------------------------------------------------------------
+   5. MOBILE LAYOUT  (<= 800px)
+   ------------------------------------------------------------- */
+@media (max-width: 800px) {
+
+    /* ---- Navigation ---- */
+    nav {
+        height: auto;
+        flex-direction: column;
+        padding: 8px 0 4px;
+        position: relative;
+    }
+    .logo {
+        width: 100%;
+        height: 70px;
+    }
+    .logo > img {
+        width: auto;
+        height: 100%;
+    }
+    nav > ul {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2px 16px;
+        padding: 4px 12px 10px;
+    }
+    nav > ul > li > a {
+        height: auto;
+    }
+    nav > ul > li,
+    nav > ul > a > li {
+        padding: 8px 4px;
+    }
+
+    /* ---- Cancel old fixed-height rules from style.css ---- */
+    body .main {
+        height: auto;
+    }
+
+    /* ---- Typography ---- */
+    h1 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin-bottom: 28px;
+    }
+
+    /* ---- Home ---- */
+    body .main1 { height: clamp(200px, 60vw, 420px); }
+    body .three,
+    body .box2,
+    body .main2 { margin-top: 40px; }
+
+    body .three {
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+    body .imga,
+    body .imgb,
+    body .imgc {
+        flex: 0 0 auto;
+        width: 90%;
+        max-width: 420px;
+        height: 300px;
+    }
+
+    body .para1,
+    body .para2 {
+        width: 92%;
+        min-height: 0;
+        flex-direction: column;
+    }
+    body .para2 {
+        flex-direction: column-reverse;
+    }
+    body .left-a,
+    body .right-b,
+    body .right-a,
+    body .left-b {
+        width: 100%;
+    }
+    body .right-a,
+    body .left-b {
+        min-height: clamp(220px, 60vw, 360px);
+    }
+    body .text {
+        width: 88%;
+        line-height: 1.75;
+        font-size: 1rem;
+        padding: 24px 0;
+    }
+    body .text h1 {
+        font-size: clamp(1.35rem, 5vw, 1.8rem);
+    }
+
+    body .sketch {
+        margin-top: 40px;
+        gap: 18px;
+    }
+
+    /* ---- Gallery ---- */
+    body .main > h2 {
+        padding: 0 16px;
+        margin-top: 24px;
+        font-size: clamp(1.05rem, 4vw, 1.4rem);
+    }
+    body .main > .top > .only,
+    body .main > .bottom {
+        padding: 10px;
+    }
+
+    /* ---- Contact: map + hours stack ---- */
+    body .bottom:has(> .map) {
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+        gap: 24px;
+        padding: 0 16px;
+        margin-bottom: 48px;
+    }
+    body .map {
+        width: 100%;
+        height: 320px;
+    }
+    body .hours {
+        width: 100%;
+        height: auto;
+        line-height: 2.4;
+    }
+    body .hours h2 {
+        line-height: 1.4;
+        margin-bottom: 8px;
+    }
+
+    /* ---- Footer ---- */
+    body .footer-button {
+        font-size: 12px;
+    }
+}
+
+
+/* -------------------------------------------------------------
+   6. MENU CARDS STACK  (<= 720px)
+   ------------------------------------------------------------- */
+@media (max-width: 720px) {
+    body .container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        gap: 22px;
+    }
+    body .box {
+        flex: 0 0 auto;
+        width: 92%;
+        max-width: 420px;
+        height: auto;
+    }
+    body .box h2 {
+        font-size: 1.15rem;
+    }
+}
+
+/* Keep 3 cards side-by-side between 721px and 800px
+   (undoes the old column rule in style.css) */
+@media (min-width: 721px) and (max-width: 800px) {
+    body .container {
+        flex-direction: row;
+        align-items: stretch;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    body .box {
+        flex: 1 1 0;
+        width: auto;
+        max-width: 400px;
+        height: auto;
+    }
+}
+
+
+/* -------------------------------------------------------------
+   7. PHONES  (<= 600px)
+   ------------------------------------------------------------- */
+@media (max-width: 600px) {
+
+    /* Sketch icons: 2 per row */
+    body .lil {
+        width: calc(50% - 9px);
+        min-height: 0;
+        height: auto;
+    }
+    body .lil > img {
+        height: 150px;
+    }
+    body .lil > h3,
+    body .lil > p {
+        font-size: 0.9rem;
+    }
+
+    /* Contact info boxes: 1 per row */
+    body .contact-box > .con-box {
+        width: 100%;
+        min-height: 170px;
+    }
+    body .contact-box > .con-box > .type {
+        width: 85%;
+    }
+
+    /* Contact form: single column */
+    body .form-box {
+        width: 94%;
+        padding: 12px;
+        margin: 24px auto;
+    }
+    body .form-box h1 {
+        margin-bottom: 28px;
+    }
+    body .form-row {
+        flex-direction: column;
+        gap: 22px;
+        margin-bottom: 22px;
+    }
+    body .field {
+        width: 100%;
+    }
+    body .terms {
+        margin: 28px 0;
+        font-size: 0.95rem;
+    }
+
+    /* Gallery: big image on top, two small side by side */
+    body .main > .top {
+        flex-direction: column;
+        height: auto;
+        margin-top: 20px;
+    }
+    body .main > .top > .only {
+        width: 100%;
+        height: 72vw;
+    }
+    body .main > .top > .two {
+        width: 100%;
+        height: 46vw;
+        flex-direction: row;
+    }
+    body .main > .top > .two > .two-a,
+    body .main > .top > .two > .two-b {
+        width: 50%;
+        height: 100%;
+    }
+    body .main > .bottom {
+        height: 56vw;
+        margin-bottom: 36px;
+    }
+    /* keep contact map block unaffected by the gallery rule above */
+    body .bottom:has(> .map) {
+        height: auto;
+        margin-bottom: 48px;
+    }
+
+    /* Footer: columns side by side, contact full width */
+    body .footer-main {
+        gap: 28px 20px;
+    }
+    body .footer-column {
+        flex: 1 1 40%;
+    }
+    body .footer-quote {
+        font-size: 20px;
+    }
+    body .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 11px;
+        gap: 8px;
+        padding-bottom: 20px;
+    }
+}
+
+
+/* -------------------------------------------------------------
+   8. SMALL PHONES  (<= 480px)
+   ------------------------------------------------------------- */
+@media (max-width: 480px) {
+    .logo {
+        height: 60px;
+    }
+    nav > ul {
+        gap: 0 10px;
+    }
+    nav > ul > li,
+    nav > ul > a > li {
+        font-size: 0.78rem;
+        letter-spacing: 0.06em;
+    }
+
+    body .imga,
+    body .imgb,
+    body .imgc {
+        height: 260px;
+    }
+    body .lil > img {
+        height: 130px;
+    }
+    body .footer-brand h1,
+    body .footer-brand h2 {
+        font-size: 28px;
+    }
+    body .footer-column {
+        flex: 1 1 100%;
+    }
+    body .text {
+        width: 90%;
+    }
+}
+
+
+/* -------------------------------------------------------------
+   9. TOUCH DEVICES – no sticky hover "lift" effects
+   ------------------------------------------------------------- */
+@media (hover: none) {
+    body .box:hover,
+    body .imga:hover,
+    body .imgb:hover,
+    body .imgc:hover,
+    .lil:hover {
+        transform: none;
+    }
+}
